@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Home | Olympics Analytics{% endblock %}
+{% block content %}
+<section class="hero d-flex align-items-center">
+  <div class="container text-center">
+    <div class="rings mb-3"><span style="background:#0081C8"></span><span style="background:#FCB131"></span><span style="background:#222"></span><span style="background:#00A651"></span><span style="background:#EE334E"></span></div>
+    <h1 class="display-4 fw-bold">Global Sports Performance<br><span class="text-gold">Analytics Dashboard</span></h1>
+    <p class="lead mt-3 mx-auto" style="max-width:720px">Explore 34 years of Olympic history (1992–2026): medal achievements, regional efficiency, host-nation advantage and the link between sports investment and success.</p>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-gold btn-lg mt-3">Explore Dashboards</a>
+    <a href="{{ url_for('story') }}" class="btn btn-outline-light btn-lg mt-3 ms-2">View Story</a>
+  </div>
+</section>
+
+<section class="stats py-5">
+  <div class="container"><div class="row text-center g-4">
+    <div class="col-6 col-md-3"><h2>6,025</h2><p>Total Medals</p></div>
+    <div class="col-6 col-md-3"><h2>60</h2><p>Nations</p></div>
+    <div class="col-6 col-md-3"><h2>8,000</h2><p>Athletes</p></div>
+    <div class="col-6 col-md-3"><h2>18</h2><p>Olympic Games</p></div>
+  </div></div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5"><span class="badge-gold">KEY INSIGHTS</span><h2 class="fw-bold mt-2">What the Data Shows</h2></div>
+    <div class="row g-4">
+      {% for icon, head, text in [
+        ('award','USA & China Dominate','The United States (735) and China (696) together win about 24% of all medals.'),
+        ('graph-up','Medal Trends','Summer medals fell to 305 in 2000 and peaked at 363 in 2020.'),
+        ('house-heart','Home Advantage','China won 63 medals at Beijing 2008; the USA won 58 at both home Games.'),
+        ('cash-coin','Investment Pays','Every top medal nation is a high sports-investment country.'),
+        ('globe-americas','Regional Efficiency','South America leads efficiency at 49.6% despite winning few medals.'),
+        ('snow','Season Strengths','Canada and Norway are far stronger in the Winter Games.')] %}
+      <div class="col-md-6 col-lg-4"><div class="insight-card h-100">
+        <i class="bi bi-{{ icon }}"></i><h5 class="fw-bold mt-3">{{ head }}</h5><p class="mb-0">{{ text }}</p>
+      </div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

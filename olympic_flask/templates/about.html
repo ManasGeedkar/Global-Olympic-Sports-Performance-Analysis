@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}About | Olympics Analytics{% endblock %}
+{% block content %}
+<section class="page-head"><div class="container"><h1 class="fw-bold">About This Project</h1></div></section>
+<section class="py-5"><div class="container" style="max-width:900px">
+  <h4 class="fw-bold">Problem Statement</h4>
+  <p>Analysing what drives Olympic success is difficult because of the large volume of historical data from 1992 to 2026. This project uses Tableau to analyse medal achievements across nations, athlete participation, regional performance efficiency, sport-category medal distribution, and the relationship between sports investment and medal outcomes in the Summer and Winter Games.</p>
+
+  <h4 class="fw-bold mt-4">Dataset</h4>
+  <table class="table table-bordered">
+    <thead class="table-dark"><tr><th>File</th><th>Rows</th><th>Columns</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>athletes.csv</td><td>8,000</td><td>26</td><td>Athlete profiles, sport category, medals</td></tr>
+      <tr><td>medal_results.csv</td><td>910</td><td>19</td><td>Country medals per Games, investment, efficiency</td></tr>
+      <tr><td>games_summary.csv</td><td>18</td><td>10</td><td>One row per Olympic Games</td></tr>
+      <tr><td>alltime_country_rankings.csv</td><td>60</td><td>13</td><td>All-time totals and rank per country</td></tr>
+    </tbody>
+  </table>
+
+  <h4 class="fw-bold mt-4">Who It Helps</h4>
+  <ul>
+    <li><b>Olympic Committee strategists</b>: choose high-yield sport categories to invest in.</li>
+    <li><b>Sports investment analysts</b>: compare investment levels with medal efficiency by region.</li>
+    <li><b>Journalists &amp; storytellers</b>: tell data-backed stories about host advantage and trends.</li>
+  </ul>
+
+  <h4 class="fw-bold mt-4">Tools Used</h4>
+  <p>Tableau Public (12 visualizations, 2 dashboards, 8-scene story, 7 calculated fields + 1 parameter), Python Flask, Bootstrap 5, Tableau Embedding API v3.</p>
+</div></section>
+{% endblock %}

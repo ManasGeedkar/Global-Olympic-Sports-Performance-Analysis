@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} | Olympics Analytics{% endblock %}
+{% block content %}
+<section class="page-head"><div class="container">
+  <h1 class="fw-bold">{{ title }}</h1><p class="mb-0">{{ subtitle }}</p>
+</div></section>
+<section class="py-4"><div class="container-fluid px-lg-5">
+  <div class="viz-wrap">
+    <tableau-viz id="tableauViz" src="{{ viz_url }}" toolbar="bottom" hide-tabs width="100%" height="900"></tableau-viz>
+  </div>
+  <p class="text-center mt-3"><a href="{{ profile }}" target="_blank" class="btn btn-outline-dark btn-sm"><i class="bi bi-box-arrow-up-right"></i> Open on Tableau Public</a></p>
+</div></section>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+{% endblock %}
