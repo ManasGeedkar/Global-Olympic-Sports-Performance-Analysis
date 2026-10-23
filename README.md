@@ -5,4 +5,6 @@ Tableau project analyzing Olympic medal performance, regional efficiency and spo
 
 **Dataset:** https://www.kaggle.com/datasets/meruvakodandasuraj/olympic-games-performance-and-medal-history-199226
 
+**Demo Video:** https://drive.google.com/file/d/16cYlP0-HJqdKLURIMIJ88-U61SnViFC7/view?usp=sharing
+
 **Web Integration:** Flask app in `olympic_flask/` (`pip install flask` → `python app.py` → http://127.0.0.1:5000)
